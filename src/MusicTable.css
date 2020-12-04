@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.music-table {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+td {
+  margin: 2px;
+  padding: 1rem;
+}
