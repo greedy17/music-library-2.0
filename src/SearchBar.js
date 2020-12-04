@@ -1,7 +1,12 @@
-import react from 'react';
+import React from 'react';
+import './SearchBar.css';
 
-export default class SearchBar extends react.Component {
-  state = {
-    songs = []
-  }
+function SearchBar() {
+  return (
+    <div className='search'>
+    <input placeholder="Search library"></input>
+    </div>
+  )
 }
+
+export default SearchBar;

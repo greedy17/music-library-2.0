@@ -17,18 +17,25 @@ export default class MusicTable extends React.Component{
 
   render(){
     return (
+      <div className="library">
         <table>
           <tr className="music-table">
             {this.state.music.map(single => 
             <td>
+            <span className="song-title">
             {single.title}
+            </span>
             {single.album}
+            <span></span>
             {single.artist}
+            <span></span>
             {single.genre}
+            <span></span>
             {single.releaseDate}
             </td>)} 
           </tr>
         </table>
+      </div>
     )
   }
 }

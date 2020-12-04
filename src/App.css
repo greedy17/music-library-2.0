@@ -1,0 +1,16 @@
+body {
+  background-image: linear-gradient(rgb(6, 62, 136), black);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: auto;
+  color: white;
+}
+
+h1 {
+  padding-left: 20px;
+  padding-top: 20px;
+  color: white;
+  box-shadow: 10px 5px 40px rgb(12, 0, 14);
+  width: 00px;
+  height: 100px;
+}

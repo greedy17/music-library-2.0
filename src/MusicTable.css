@@ -1,6 +1,25 @@
-body {
+::-webkit-scrollbar {
+  width: 1em;
+  background-color: white;
+  border-radius: 3rem;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(rgb(6, 62, 136), black);
+  border-radius: 3rem;
+}
+
+.library {
   display: flex;
   justify-content: center;
+  height: 600px;
+  width: auto;
+  overflow-y: scroll;
 }
 
 .music-table {
@@ -12,4 +31,12 @@ align-items: center;
 td {
   margin: 2px;
   padding: 1rem;
+}
+
+span {
+  padding: .5rem;
+}
+
+.song-title {
+  color: darkorchid;
 }
