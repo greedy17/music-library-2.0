@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import MusicTable from '../components/MusicTable';
 import SearchBar from '../components/SearchBar';
+import './App.css'
 
 class App extends Component{
   constructor(){
@@ -28,20 +29,17 @@ class App extends Component{
    const filteredMusic = this.state.music.filter(song => {
      return song.title.toLowerCase().includes(this.state.searchField.toLowerCase())})
      if (this.state.music.length === 0) {
-       return <h1>Loading</h1>
+       return <h1>Loading...</h1>
      }else {
        return (
         <div className="App">
-        <h1>Music Library</h1>
+        <h1 className='title'>PlayList</h1>
         <SearchBar searchChange={this.onSearchChange} />
         <MusicTable music={filteredMusic}/>
         </div>
        )
      }
   }
-  
-
 }
-
 
 export default App;

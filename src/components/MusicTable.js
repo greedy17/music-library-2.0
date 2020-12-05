@@ -3,7 +3,10 @@ import Tile from './tile';
 
 const MusicTable = ({music}) => {
     return (
-      <div className="library">
+      <div 
+      style={{overflowY: 'scroll', height: '550px', width: "700px",
+      display: 'flex', justifyContent: 'center', alignItems: 'center', 
+      flexWrap: 'wrap'}}>
         {
           music.map((song, i) => {
             return(
