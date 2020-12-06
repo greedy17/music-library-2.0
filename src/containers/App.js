@@ -32,6 +32,9 @@ class App extends Component{
       song.genre.toLowerCase().includes(this.state.searchField.toLowerCase()) ||
       song.album.toLowerCase().includes(this.state.searchField.toLowerCase()) ||
       song.releaseDate.toLowerCase().includes(this.state.searchField.toLowerCase())});
+     if (this.state.music.length === 0) {
+       return <h1>Loading...</h1>
+     }else {
        return (
         <div className="App">
         <h1 className='title'>PlayList</h1>
@@ -39,6 +42,7 @@ class App extends Component{
         <MusicTable music={filteredMusic}/>
         </div>
        )
+     }
   }
 }
 
