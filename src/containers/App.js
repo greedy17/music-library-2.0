@@ -27,7 +27,11 @@ class App extends Component{
 
   render() {
    const filteredMusic = this.state.music.filter(song => {
-     return song.title.toLowerCase().includes(this.state.searchField.toLowerCase())})
+     return song.title.toLowerCase().includes(this.state.searchField.toLowerCase()) ||
+      song.artist.toLowerCase().includes(this.state.searchField.toLowerCase()) ||
+      song.genre.toLowerCase().includes(this.state.searchField.toLowerCase()) ||
+      song.album.toLowerCase().includes(this.state.searchField.toLowerCase()) ||
+      song.releaseDate.toLowerCase().includes(this.state.searchField.toLowerCase())});
      if (this.state.music.length === 0) {
        return <h1>Loading...</h1>
      }else {
